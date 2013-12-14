@@ -197,3 +197,5 @@ autocmd FileType html noremap  :call HtmlBeautify()
 " for css or scss
 autocmd FileType css noremap  :call CSSBeautify()
 
+"python语法检查
+Bundle 'https://github.com/kevinw/pyflakes-vim.git'
