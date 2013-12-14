@@ -1,6 +1,12 @@
 "设置行号
 set nu
 
+"不生成备份文件"
+set nobackup
+set noswapfile
+"set backupdir=$VIMDATA/backup
+"set directory=$VIMDATA/temp
+
 " 设置自动编码识别，中文引号显示
 set fileencodings=utf-8,gbk
 set ambiwidth=double
@@ -50,6 +56,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 filetype plugin indent on
+filetype plugin on
 
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
@@ -141,6 +148,7 @@ nmap <F9> <Esc>:!ctags -R *<CR>
 "Tab-complete your Python code
 Bundle 'Pydiction'
 let g:pydiction_menu_height=20
+let g:pydiction_loaction='~/.vim/bundle/Pydiction/complete-dict'
 
 "winmanager
 Bundle 'winmanager'
