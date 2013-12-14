@@ -148,7 +148,7 @@ nmap <F9> <Esc>:!ctags -R *<CR>
 "Tab-complete your Python code
 Bundle 'Pydiction'
 let g:pydiction_menu_height=20
-let g:pydiction_loaction='~/.vim/bundle/Pydiction/complete-dict'
+let g:pydiction_location='~/.vim/bundle/Pydiction/complete-dict'
 
 "winmanager
 Bundle 'winmanager'
