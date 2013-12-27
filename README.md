@@ -26,3 +26,5 @@ vim /etc/vimrc
 安装其它插件：
 :BundleInstall
 
+5、安装ctags：
+yum install ctags
