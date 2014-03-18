@@ -18,7 +18,7 @@ cd vim74/
 </pre>
 （--enable-multibyte开启多字符编码，必选，不然VIM中文乱码。）
 <pre>make && make install</pre>
-如果之前安装过vim旧版本，替换系统自带的VIM7.0：
+如果之前安装过vim旧版本，替换系统自带的VIM7.0，在~/.bashrc中指定别名：
 <pre>alias vim='/usr/local/vim/bin/vim'</pre>
 或删除系统自带的VIM：
 <pre>rpm -e vim-enhanced</pre>
