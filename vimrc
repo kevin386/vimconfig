@@ -42,8 +42,14 @@ set tabstop=4
 "表示让tab点宽度显示成和4个空格点宽度一样
 set softtabstop=4
 
+"用space替代tab多输入
+set expandtab
+
 "高亮显示匹配点括号
 set showmatch
+
+"tab显示为>---,行尾显示-"
+set listchars=tab:>-
 
 "设置当文件从外部被改动时自动载入
 set autoread
@@ -56,7 +62,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 filetype plugin indent on
-filetype plugin on
+"filetype plugin on
 
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
