@@ -37,17 +37,19 @@ git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/vundle</pre>
 </li>
 <li>修改~/.vimrc
 先拷贝全局的vimrc到home当前用户的home目录，如果不确定vimrc位置，先查找vimrc位置
-<pre>find / -name vimrc</pre>
-<pre>cp /etc/vim/vimrc ~/.vimrc</pre>
-修改：
-<pre>vim ~/.vimrc</pre>
-在文件末尾加上：
-<pre>source ~/.vim/exconf/vimrc</pre>
+<pre>
+find / -name vimrc
+cp /etc/vim/vimrc ~/.vimrc
+vim ~/.vimrc
+source ~/.vim/exconf/vimrc
+</pre>
 </li>
 <li>
 拷贝colors到 ~/.vim/
-<pre>mkdir ~/.vim/colors</pre>
-<pre>cp -R ~/.vim/exconf/colors/* ~/.vim/colors/</pre>
+<pre>
+mkdir ~/.vim/colors
+cp -R ~/.vim/exconf/colors/* ~/.vim/colors/
+</pre>
 </li>
 <li>使配置中用bundle管理的其它插件生效
 重新打开/etc/vimrc：
