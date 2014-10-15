@@ -38,7 +38,7 @@ git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/vundle</pre>
 <li>修改~/.vimrc
 先拷贝全局的vimrc到home当前用户的home目录，如果不确定vimrc位置，先查找vimrc位置
 <pre>find / -name vimrc</pre>
-<pre>cp /etc/vim/.vimrc ~/</pre>
+<pre>cp /etc/vim/vimrc ~/.vimrc</pre>
 修改：
 <pre>vim ~/.vimrc</pre>
 在文件末尾加上：
