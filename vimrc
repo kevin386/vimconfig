@@ -12,7 +12,11 @@ set fileencodings=utf-8,gbk
 set ambiwidth=double
 
 " 主题
-colorscheme desert
+"colorscheme desert
+colorscheme github
+"colorscheme guardian
+"colorscheme vividchalk
+
 set background=dark
 
 "自动补全
@@ -23,11 +27,11 @@ set completeopt=longest,menu
 set wildmenu
 
 "语法高亮
-"autocmd FileType python set omnifunc=pythoncomplete#Complete
-"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType css set omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType java set omnifunc=xmlcomplete#Complete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java set omnifunc=xmlcomplete#Complete
 
 "搜索逐字高亮
 set hlsearch
@@ -126,23 +130,29 @@ let g:Powline_symbols='fancy'
 let NERDTreeIgnore=['\.o$', '\.ko$', '\.symvers$', '\.order$', '\.mod.c$', '\.swp$', '\.bak$', '\~$']
 let NERDTreeSortOrder=['\/$', 'Makefile', 'makefile', '\.c$', '\.cc$', '\.cpp$', '\.h$', '*', '\~$']
 let NERDTreeMinimalUI=1
-let NERDTreeQuitOnOpen=1
-"let NERDTreeWinPos = 'right'
-let NERDTreeWinSize = 20
+"let NERDChristmasTree=1
+let NERDTreeAutoCenter=1
+"打开文件后是否关闭NerdTree窗口
+let NERDTreeQuitOnOpen=0
+let NERDTreeWinPos = 'left'
+let NERDTreeWinSize = 30
+"是否默认显示隐藏文件
+let NERDTreeShowHidden=1  
 
 "默认打开NERDTree
-"autocmd VimEnter * NERDTree
-"nnoremap <silent> <F3> :NERDTreeToggle<CR>
+autocmd VimEnter * NERDTree
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 "Bundle 'majutsushi/tagbar'
 "nnoremap <silent><F9> :TagbarToggle<cr>
 "imap <F9> <Esc>:TagbarToggle<cr>
-let g:tagbar_autofocus = 1
-let g:tagbar_sort = 0
-let g:tagbar_compact = 1
-let g:tagbar_indent = 1
-let g:tagbar_autoshowtag = 1
-let g:tagbar_width = 20
+"let g:tagbar_autofocus = 1
+"let g:tagbar_sort = 0
+"let g:tagbar_compact = 1
+"let g:tagbar_indent = 1
+"let g:tagbar_autoshowtag = 1
+"let g:tagbar_width = 30
+
 "TagbarToggle
 nnoremap <silent> <F4> :TagbarToggle<CR>
 "tags的查找目录，如果当前目录找不到，自动回溯查找
@@ -172,16 +182,16 @@ Bundle 'Raimondi/delimitMate'
 
 "CtrlP插件提供模糊快速查找文件功能，只要输入文件大概的名字，CtrlP会在根目录下查找文件，采用模糊匹配。这比在NerdTree中查找快捷，比较适合于大型工程代码浏览。根目录可以是：当前目录，父目录，打开CtrlP时指定的目录，打开的Buffer和历史文件等。
 " CtrlP for file searching
-"Bundle 'kien/ctrlp.vim'
-"let g:ctrlp_map = '<c-h>'
-"let g:ctrlp_cmd = 'CtrlP'
-"let g:ctrlp_custom_ignore = {
-"\ 'dir': '\v[\/]\.(git|hg|svn)$',
-"\ 'file': '\v\.(o|ko|so|obj|dll|exe)$',
-"\ 'link': 'some_bad_symbolic_links',
-"\ }
-"let g:ctrlp_working_path_mode = 'ra'
-"let g:ctrlp_match_window_bottom=1
+Bundle 'kien/ctrlp.vim'
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = {
+\ 'dir': '\v[\/]\.(git|hg|svn)$',
+\ 'file': '\v\.(o|ko|so|obj|dll|exe)$',
+\ 'link': 'some_bad_symbolic_links',
+\ }
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_match_window_bottom=1
 
 
 "miniBufExpl插件提供多文件Buffer显示功能，在一个窗口内显示所有打开的文件，类似于Windows下的File Tab。miniBufExpl原作者不在更新此插件，好在还有网友继续完善提高此插件，并将它托管到GitHub上。
@@ -213,3 +223,7 @@ autocmd FileType css noremap  :call CSSBeautify()
 
 "python语法检查
 Bundle 'https://github.com/kevinw/pyflakes-vim.git'
+
+Bundle 'python.vim'
+
+"配色方案
