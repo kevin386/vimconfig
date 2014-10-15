@@ -1,13 +1,13 @@
-vimconfig，my CnetOS vim config，使用bundle管理vim插件
+vimconfig，my vim config，使用bundle管理vim插件
 =========
 <p>
 <h3>一、使用该config，需要安装vim最新版本以及ctags：</h3>
 <ol>
 <li>安装ctags：
-<pre>yum install ctags</pre>
+<pre>yum/apt-get install ctags</pre>
 </li>
 <li>安装git:
-<pre>yum install git</pre>
+<pre>yum/apt-get install git</pre>
 </li>
 <li>安装vim7.4：
 <pre>cd ~
@@ -37,10 +37,11 @@ Install ncurses (ncurses-devel) and try again.
 <ol>
 <li>安装bundle:
 <pre>cd ~
-git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/vundle</pre>
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+</pre>
 </li>
 <li>下载vim配置：
-<pre>git clone git@github.com:kevin386/vimconfig.git ~/.vim/exconf</pre>
+<pre>git clone https://github.com/kevin386/vimconfig.git ~/.vim/exconf</pre>
 </li>
 <li>修改~/.vimrc，先拷贝全局的vimrc到home当前用户的home目录，如果不确定vimrc位置，先查找vimrc位置
 <pre>
@@ -60,10 +61,8 @@ mkdir ~/.vim/colors
 cp -R ~/.vim/exconf/colors/* ~/.vim/colors/
 </pre>
 </li>
-<li>使配置中用bundle管理的其它插件生效
-重新打开/etc/vimrc：
-<pre>vim /etc/vimrc</pre>
-安装配置文件中的插件(vim命令)：
-<pre>:BundleInstall</pre>
+<li>使配置中用bundle管理的其它插件生效，重新打开/etc/vimrc，运行安装命令，如果报错，请确定vim版本是否最新，以及git或者bundle是否安装成功：
+<pre>vim /etc/vimrc
+:BundleInstall</pre>
 </li>
 </p>
