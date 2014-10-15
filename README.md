@@ -14,7 +14,7 @@ vimconfig，my vim config，使用bundle管理vim插件
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 tar jxvf vim-7.4.tar.bz2
 cd vim74/
-./configure --prefix=/usr/local/vim --enable-multibyte
+./configure --prefix=/usr/local/vim --enable-multibyte --enable-cscope --enable-pythoninterp 
 </pre>
 （--enable-multibyte开启多字符编码，必选，不然VIM中文乱码。）
 <pre>make && make install</pre>
