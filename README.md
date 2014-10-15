@@ -35,12 +35,14 @@ git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/vundle</pre>
 <li>下载vim配置：
 <pre>git clone git@github.com:kevin386/vimconfig.git ~/.vim/exconf</pre>
 </li>
-<li>修改~/.vimrc
-先拷贝全局的vimrc到home当前用户的home目录，如果不确定vimrc位置，先查找vimrc位置
+<li>修改~/.vimrc，先拷贝全局的vimrc到home当前用户的home目录，如果不确定vimrc位置，先查找vimrc位置
 <pre>
 find / -name vimrc
 cp /etc/vim/vimrc ~/.vimrc
 vim ~/.vimrc
+</pre>
+在文件末尾添加：
+<pre>
 source ~/.vim/exconf/vimrc
 </pre>
 </li>
