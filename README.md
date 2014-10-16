@@ -97,5 +97,16 @@ source ~/.vim/exconf/plugin/cscope_maps.vim</pre>
 <pre>find . -name "*.py" -o -name "*.html" -o -name "*.js" > cscope.files
 cscope -Rbkq -i cscope.files  </pre>
 </li>
+<li>
+命令：
+<pre>    s：查找C代码符号
+    g：查找本定义
+    d：查找本函数调用的函数
+    c：查找调用本函数的函数
+    t：查找本字符串
+    e：查找本egrep模式
+    f：查找本文件
+    i：查找包含本文件的文件<pre>
+</li>
 </ol>
 </p>
