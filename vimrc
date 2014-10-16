@@ -11,6 +11,10 @@ set noswapfile
 set fileencodings=utf-8,gbk
 set ambiwidth=double
 
+" ^z快速进入shell
+nmap <C-Z> :shell<cr>
+inoremap <leader>n <esc>
+
 " 主题
 "colorscheme desert
 colorscheme github
@@ -140,7 +144,7 @@ let NERDTreeWinSize = 30
 let NERDTreeShowHidden=1  
 
 "默认打开NERDTree
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 "Bundle 'majutsushi/tagbar'
@@ -226,4 +230,33 @@ Bundle 'https://github.com/kevinw/pyflakes-vim.git'
 
 Bundle 'python.vim'
 
-"配色方案
+"cscope支持
+if has("cscope")
+    " use both cscope and ctag for 'ctrl-]', ':ta', and 'vim -t'
+    "set cscopetag
+
+    " check cscope for definition of a symbol before checking ctags: set to 1
+    " if you want the reverse search order.
+    set csto=0
+
+    " add any cscope database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out  
+    " else add the database pointed to by environment variable 
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+
+    " show msg when any other cscope db added
+    set cscopeverbose  
+
+    nmap <C-a>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-a>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-a>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-a>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-a>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
+    nmap <C-a>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nmap <C-a>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-a>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+
+endif
