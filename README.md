@@ -94,7 +94,7 @@ source ~/.vim/exconf/plugin/cscope_maps.vim</pre>
 </li>
 <li>
 生成cscope数据库文件：
-<pre>find . -name "*.py" -o -name "*.html" -o -name "*.js" > cscope.files
+<pre>find /home/kevin/workspace/project -name "*.py" -o -name "*.html" -o -name "*.js" > cscope.files
 cscope -Rbkq -i cscope.files  </pre>
 </li>
 <li>
