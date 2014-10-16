@@ -76,15 +76,21 @@ cp -R ~/.vim/exconf/colors/* ~/.vim/colors/
 <li>软件下载并解压： http://sourceforge.net/project/showfiles.php?group_id=466
     <pre>
     bzip2 -d  gcc-4.1.0.tar.bz2
-    tar -xvf gcc-4.1.0.tar
-    </pre>
+    tar -xvf gcc-4.1.0.tar</pre>
 </li>
 <li>软件安装: 
   <pre>
   ./configure --with-flex
   make
-  make install
-  </pre>
+  make install</pre>
+</li>
+<li>
+下载配置文件：
+<pre>
+cd ~/.vim/exconf/plugin
+wget http://cscope.sourceforge.net/cscope_maps.vim
+vim ~/.vimrc
+source ~/.vim/exconf/plugin/cscope_maps.vim</pre>
 </li>
 </ol>
 </p>
