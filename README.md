@@ -1,7 +1,8 @@
 vimconfig，my vim config，使用bundle管理vim插件
 =========
-<p>
+
 <h3>一、使用该config，需要安装vim最新版本以及ctags：</h3>
+<p>
 <ol>
 <li>安装ctags：
 <pre>yum/apt-get install ctags</pre>
@@ -32,8 +33,9 @@ Install ncurses (ncurses-devel) and try again.
 </li>
 </ol>
 </p>
-<p>
+
 <h3>二、下载并安装vim config文件：</h3>
+<p>
 <ol>
 <li>安装bundle:
 <pre>cd ~
@@ -65,4 +67,24 @@ cp -R ~/.vim/exconf/colors/* ~/.vim/colors/
 <pre>vim /etc/vimrc
 :BundleInstall</pre>
 </li>
+</ol>
+</p>
+
+<h3>三、安装cscope</h3>
+<p>
+<ol>
+<li>软件下载并解压： http://sourceforge.net/project/showfiles.php?group_id=466
+    <pre>
+    bzip2 -d  gcc-4.1.0.tar.bz2
+    tar -xvf gcc-4.1.0.tar
+    </pre>
+</li>
+<li>软件安装: 
+  <pre>
+  ./configure --with-flex
+  make
+  make install
+  </pre>
+</li>
+</ol>
 </p>
