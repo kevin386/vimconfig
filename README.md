@@ -66,10 +66,10 @@ source ~/.vim/exconf/vimrc
 </pre>
 </li>
 <li>
-拷贝colors到 ~/.vim/
+拷贝colors和plugin到 ~/.vim/
 <pre>
-mkdir ~/.vim/colors
-cp -R ~/.vim/exconf/colors/* ~/.vim/colors/
+cp -R ~/.vim/exconf/colors/ ~/.vim/
+cp -R ~/.vim/exconf/plugin/ ~/.vim/
 </pre>
 </li>
 <li>使配置中用bundle管理的其它插件生效，重新打开/etc/vimrc，运行安装命令，如果报错，请确定vim版本是否最新，以及git或者bundle是否安装成功：
