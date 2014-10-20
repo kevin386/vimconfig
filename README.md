@@ -23,8 +23,8 @@ cd vim74/
 <pre>
 Unable to find the ncurses libraries or the required header files.
 'make menuconfig' requires the ncurses libraries.
-Install ncurses (ncurses-devel) and try again.
-</pre>
+Install ncurses (ncurses-devel) and try again.</pre>
+<pre>sudo apt-get install libncurses5-dev</pre>
 
 如果之前安装过vim旧版本，替换系统自带的VIM7.0，在~/.bashrc中指定别名：
 <pre>alias vim='/usr/local/vim/bin/vim'</pre>
