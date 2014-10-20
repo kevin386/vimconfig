@@ -30,6 +30,15 @@ Install ncurses (ncurses-devel) and try again.</pre>
 <pre>alias vim='/usr/local/vim/bin/vim'</pre>
 或删除系统自带的VIM：
 <pre>rpm -e vim-enhanced</pre>
+否则把新安装的vim加入到环境变量：
+<pre>sudo gedit /etc/environment
+在PATH="...."的末尾处添加：
+:/usr/local/vim/bin
+source /etc/environment
+sudo gedit ~/.bashrc
+export PATH=/usr/local/vim/bin:$PATH
+source ~/.bashrc
+</pre>
 </li>
 </ol>
 </p>
