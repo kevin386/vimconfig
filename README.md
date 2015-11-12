@@ -28,7 +28,9 @@ Install ncurses (ncurses-devel) and try again.</pre>
 <pre>yum install ncurses-devel</pre>
 
 如果之前安装过vim旧版本，替换系统自带的VIM7.0，在~/.bashrc中指定别名：
-<pre>alias vim='/usr/local/vim/bin/vim'</pre>
+<pre>alias vim='/usr/local/vim/bin/vim'
+alias vimdiff='/usr/local/vim/bin/vimdiff'
+</pre>
 或删除系统自带的VIM：
 <pre>rpm -e vim-enhanced</pre>
 否则把新安装的vim加入到环境变量：
