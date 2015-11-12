@@ -49,7 +49,7 @@ source ~/.bashrc
 <h3>二、下载并安装vim config文件：</h3>
 <p>
 <ol>
-<li>安装bundle:
+<li>安装bundle，使用普通用户安装，其他用户引用他的.vimrc文件即可:
 <pre>cd ~
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 </pre>
