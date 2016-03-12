@@ -13,6 +13,7 @@ vimconfig，my vim config，使用bundle管理vim插件
 <li>安装vim7.4：
 <pre>cd ~
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+wget http://vim.mirror.fr/unix//vim-7.4.tar.bz2
 tar jxvf vim-7.4.tar.bz2
 cd vim74/
 ./configure --prefix=/usr/local/vim --enable-multibyte --enable-cscope --enable-pythoninterp 
