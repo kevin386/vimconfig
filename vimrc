@@ -186,16 +186,16 @@ Bundle 'Raimondi/delimitMate'
 
 "CtrlP插件提供模糊快速查找文件功能，只要输入文件大概的名字，CtrlP会在根目录下查找文件，采用模糊匹配。这比在NerdTree中查找快捷，比较适合于大型工程代码浏览。根目录可以是：当前目录，父目录，打开CtrlP时指定的目录，打开的Buffer和历史文件等。
 " CtrlP for file searching
-Bundle 'kien/ctrlp.vim'
-let g:ctrlp_map = '<c-f>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = {
-\ 'dir': '\v[\/]\.(git|hg|svn)$',
-\ 'file': '\v\.(o|ko|so|obj|dll|exe)$',
-\ 'link': 'some_bad_symbolic_links',
-\ }
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_match_window_bottom=1
+"Bundle 'kien/ctrlp.vim'
+"let g:ctrlp_map = '<c-f>'
+"let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_custom_ignore = {
+"\ 'dir': '\v[\/]\.(git|hg|svn)$',
+"\ 'file': '\v\.(o|ko|so|obj|dll|exe)$',
+"\ 'link': 'some_bad_symbolic_links',
+"\ }
+"let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_match_window_bottom=1
 
 
 "miniBufExpl插件提供多文件Buffer显示功能，在一个窗口内显示所有打开的文件，类似于Windows下的File Tab。miniBufExpl原作者不在更新此插件，好在还有网友继续完善提高此插件，并将它托管到GitHub上。
